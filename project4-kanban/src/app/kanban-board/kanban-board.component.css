@@ -1,0 +1,33 @@
+.body {
+  padding: 10px;
+}
+h4 {
+  text-align: center;
+}
+.list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  padding: 10px;
+  background-color: antiquewhite;
+}
+.item {
+  border: 1px solid gray;
+  display: block;
+  padding: 10px;
+}
+#wlist {
+  background-color: rgb(205, 64, 64);
+}
+#inprolist {
+  background-color: rgb(244, 168, 54);
+}
+#verilist {
+  background-color: rgb(210, 210, 13);
+}
+#releaselist {
+  background-color: rgb(8, 162, 8);
+}

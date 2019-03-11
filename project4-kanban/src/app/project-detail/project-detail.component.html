@@ -1,0 +1,56 @@
+<div class="container">
+  <br />
+  <table>
+    <th>Project Code</th>
+    <th>Project Name</th>
+
+    <tr>
+      <td>
+        <input
+          type="text"
+          value="{{ projectCode }}"
+          placeholder="{{ projectCode }}"
+          #pCode
+        />
+      </td>
+
+      <td>
+        <input
+          type="text"
+          value="{{ projectName }}"
+          placeholder="{{ projectName }}"
+          #pName
+        />
+      </td>
+      <td>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          value="submit"
+          (click)="updateProject(pCode.value, pName.value)"
+        >
+          Update Project Detail
+        </button>
+      </td>
+    </tr>
+  </table>
+
+  <br /><br />
+  <div *ngIf="flag">
+    <h2>Kanban board of selected project related tasks</h2>
+    <div class="item" *ngFor="let item of docList">
+      Document name: {{ item.documentName | uppercase }}<br />
+      Revision number: {{ item.revisionNumber }}<br />Project name:
+      {{ item.projectName }}<br />Project status: {{ item.status }}
+    </div>
+    <br />
+  </div>
+  <button
+    type="submit"
+    value="submit"
+    class="btn btn-primary"
+    routerLink="/projectList"
+  >
+    Back to list
+  </button>
+</div>

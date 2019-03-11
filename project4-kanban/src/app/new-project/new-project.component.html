@@ -1,0 +1,25 @@
+<div class="container">
+  <input
+    class="form-control"
+    type="text"
+    name="projectName"
+    placeholder="Project name"
+    #projectName
+  /><br />
+  <input
+    class="form-control"
+    type="text"
+    name="projectCode"
+    placeholder="Project Code"
+    #projectCode
+  /><br />
+  <button
+    class="btn btn-primary"
+    type="submit"
+    value="submit"
+    (click)="createProject(projectCode.value, projectName.value)"
+    routerLink="/projectList"
+  >
+    Create project
+  </button>
+</div>

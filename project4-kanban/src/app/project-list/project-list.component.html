@@ -1,0 +1,26 @@
+<div class="container">
+  <br />
+  <table>
+    <tr>
+      <th>Project name</th>
+      <th>Project code</th>
+    </tr>
+    <tr *ngFor="let project of projList">
+      <td>
+        <a
+          class="nav-link"
+          routerLink="/projectDetail/{{ project.projName }}"
+          >{{ project.projCode }}</a
+        >
+      </td>
+
+      <td>
+        <a
+          class="nav-link"
+          routerLink="/projectDetail/{{ project.projName }}"
+          >{{ project.projName }}</a
+        >
+      </td>
+    </tr>
+  </table>
+</div>

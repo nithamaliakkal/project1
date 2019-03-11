@@ -1,0 +1,9 @@
+th,
+td {
+  padding: 5px;
+}
+.item {
+  border: 1px solid gray;
+  display: block;
+  padding: 10px;
+}

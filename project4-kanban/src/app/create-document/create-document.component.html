@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="body">
+    <h3>Create a new document</h3>
+    <form>
+      <label for="documentName">Document name</label>
+
+      <input
+        type="text"
+        class="form-control"
+        id="documentName"
+        placeholder="Provide document name"
+        #docName
+      />
+      <br />
+      <label for="revNumber">Revision number</label>
+      <input
+        type="text"
+        id="revNumber"
+        class="form-control"
+        placeholder="Revision number"
+        #revNumber
+      />
+      <br />
+
+      <label for="status">Status</label>
+      <select class="form-control" id="status" #status>
+        <option value="Started">Started</option>
+        <option value="In progress">In progress</option>
+        <option value="Checked">Checked</option>
+        <option value="Released">Released</option> </select
+      ><br />
+      <label for="project">Select project</label>
+      <select class="form-control" id="project" #projectName>
+        <option *ngFor="let project of projList" value="{{ project.projName }}">
+          {{ project.projName }}
+        </option>
+      </select>
+      <br />
+      <button
+        class="btn btn-primary"
+        type="submit"
+        (click)="
+          createDoc(
+            docName.value,
+            revNumber.value,
+            status.value,
+            projectName.value
+          )
+        "
+        routerLink="/kanban"
+      >
+        Create new document
+      </button>
+      &nbsp;
+      <button class="btn btn-primary" type="submit" routerLink="/kanban">
+        Go to kanban board
+      </button>
+    </form>
+  </div>
+</div>
