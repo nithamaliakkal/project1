@@ -8,10 +8,6 @@ import * as Parse from 'parse';
 export class ProjectComponent implements OnInit {
   ProjectList = Parse.Object.extend('ProjectList');
   projectList = new this.ProjectList();
-  a = 8;
-  b = 8;
-  v = 0;
-  k = 'fhjfgfg';
   constructor() {}
 
   ngOnInit() {}
